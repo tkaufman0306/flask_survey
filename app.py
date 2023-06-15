@@ -13,11 +13,12 @@ app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 debug = DebugToolbarExtension(app)
 
+
 @app.route("/")
 def show_survey_start():
     """Select a survey"""
 
-    return render_template('survey_start.html', survey=survey)
+    return render_template("survey_start.html", survey=survey)
 
 
 @app.route("/begin", methods=["POST"])
